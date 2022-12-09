@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DMXCore100.Linux": {
+      "commandName": "Project",
+      "remoteDebugEnabled": true,
+      "remoteDebugMachine": "192.168.240.145:22",
+      "authenticationMode": "None"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType Condition="'$(Configuration)'=='Release'">WinExe</OutputType>
+    <OutputType Condition="'$(Configuration)'=='Debug'">Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>DMXCore.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Condition="exists('..\DMXCore100.Windows')">
+    <EmbeddedResource Include="..\DMXCore100.Windows\Package.appxmanifest" LogicalName="Package.appxmanifest" />
+    <Content Include="..\DMXCore100.Windows\Images\StoreLogo.scale-400.png" Link="Assets\StoreLogo.png" />
+    <Content Include="Assets\Fonts\uno-fluentui-assets.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <UpToDateCheckInput Include="..\DMXCore100.Shared\**\*.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Iot.Device.Bindings" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Owin" Version="6.0.11" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0" />
+	<PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
+	<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="SkiaSharp.Skottie" Version="2.88.3" />
+    <PackageReference Include="SkiaSharp.Views.Uno.WinUI" Version="2.88.3" />
+    <PackageReference Include="Uno.Extensions.Navigation.Toolkit.WinUI" Version="2.3.0-dev.376" />
+    <PackageReference Include="Uno.Toolkit.WinUI" Version="2.4.0-dev.135" />
+    <PackageReference Include="Uno.WinUI" Version="4.7.0-dev.529" />
+    <PackageReference Include="Uno.WinUI.Lottie" Version="4.7.0-dev.529" />
+    <PackageReference Include="Uno.WinUI.Skia.Linux.FrameBuffer" Version="4.7.0-dev.529" />
+    <PackageReference Include="Uno.WinUI.RemoteControl" Version="4.7.0-dev.529" Condition="'$(Configuration)'=='Debug'" />
+    <PackageReference Include="Uno.UI.Adapter.Microsoft.Extensions.Logging" Version="4.7.0-dev.529" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+  </ItemGroup>
+  <Import Project="..\DMXCore100.Shared\DMXCore100.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <_Globbed_Compile Remove="IoManager.cs" />
+  </ItemGroup>
+</Project>

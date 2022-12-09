@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="DMXCore.DMXCore100.Views.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DMXCore100.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="About" />
+            <Button Content="Back" Command="{Binding BackCommand}" Width="200" Height="100" />
+        </StackPanel>
+    </Grid>
+</Page>

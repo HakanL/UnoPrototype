@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>6279c845-92f8-4333-ab99-3d213163593c</ProjectGuid>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.Common.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.Common.props" />
+  <PropertyGroup />
+  <Import Project="DMXCore100.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.CSharp.targets" />
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\AboutPage.xaml" />
+    <UpToDateCheckInput Remove="Views\HomePage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_Globbed_Compile Remove="Assets\LottieLogo1.cs" />
+    <_Globbed_Compile Remove="Assets\LottieLogo1_Modified.cs" />
+    <_Globbed_Compile Remove="Converters\StringFormatConverter.cs" />
+    <_Globbed_Compile Remove="Extensions\ColorExtensions.cs" />
+    <_Globbed_Compile Remove="GlobalUsings.cs" />
+    <_Globbed_Compile Remove="MessageService.cs" />
+    <_Globbed_Compile Remove="Models\ObservableModelBase.cs" />
+    <_Globbed_Compile Remove="Services\HighAccuracyTimer.cs" />
+    <_Globbed_Compile Remove="Services\OperationManager.cs" />
+    <_Globbed_Compile Remove="ViewModels\HomeViewModel.cs" />
+    <_Globbed_Compile Remove="Views\AboutPage.xaml.cs" />
+    <_Globbed_Compile Remove="Views\HomePage.xaml.cs" />
+    <_Globbed_Compile Remove="WebStartup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <_Globbed_Content Remove="Assets\Images\dmxcore_logo.scale-100.png" />
+    <_Globbed_Content Remove="Assets\Images\dmxcore_logo.scale-150.png" />
+    <_Globbed_Content Remove="Assets\Images\dmxcore_logo.scale-200.png" />
+    <_Globbed_Content Remove="Assets\Images\dmxcore_logo.scale-300.png" />
+    <_Globbed_Content Remove="Assets\Images\dmxcore_logo.scale-400.png" />
+    <_Globbed_Content Remove="Assets\Images\logo_dmxcore_100.scale-100.png" />
+    <_Globbed_Content Remove="Assets\Images\logo_dmxcore_100.scale-400.png" />
+    <_Globbed_Content Remove="Assets\LottieLogo1.cs" />
+    <_Globbed_Content Remove="Assets\LottieLogo1.json" />
+    <_Globbed_Content Remove="Assets\LottieLogo1_Modified.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <_Globbled_Page Remove="Views\AboutPage.xaml" />
+    <_Globbled_Page Remove="Views\HomePage.xaml" />
+  </ItemGroup>
+</Project>
